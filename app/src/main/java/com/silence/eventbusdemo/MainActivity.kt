@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     @EventMethod(ThreadMode.UI)
-    @Subscribe(threadMode = org.greenrobot.eventbus.ThreadMode.MAIN)
+    @Subscribe(threadMode = org.greenrobot.eventbus.ThreadMode.MAIN, sticky = true, priority = 2)
     fun dataReceive(dataModel: DataModel) {
         Toast.makeText(this, dataModel.msg, Toast.LENGTH_LONG).show()
     }
