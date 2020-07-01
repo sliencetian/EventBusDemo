@@ -21,7 +21,7 @@ enum class ThreadMode {
 @Target(AnnotationTarget.FUNCTION)
 annotation class EventMethod(val threadMode: ThreadMode = ThreadMode.DEFAULT)
 
-object EventBus {
+object CustomEventBus {
 
     private val eventBus = EventBusInternal()
 
